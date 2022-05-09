@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_YjNrAf()
+[Activity
+    Text = ${SendActivity_YjNrAf_text()}
+]
+
+# SendActivity_YjNrAf_text()
+- La fecha de hoy es: ${formatDateTime(utcNow(), "dddd, d MMMM yyyy", "es-CL")}.

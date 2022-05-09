@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_LPeHqx()
+[Activity
+    Text = ${ChoiceInput_Prompt_LPeHqx_text()}
+]
+
+# ChoiceInput_Prompt_LPeHqx_text()
+- Puedo ayudarte con la hora, fecha o el clima. ¿Qué necesitas?
+# ConfirmInput_Prompt_rRClEV()
+[Activity
+    Text = ${ConfirmInput_Prompt_rRClEV_text()}
+]
+
+# ConfirmInput_Prompt_rRClEV_text()
+- Desea saber algo más?
+# SendActivity_9IdCMs()
+[Activity
+    Text = ${SendActivity_9IdCMs_text()}
+]
+
+# SendActivity_9IdCMs_text()
+- Adiós! Si necesitas algo más, escríbe lo que quieras en el chat.

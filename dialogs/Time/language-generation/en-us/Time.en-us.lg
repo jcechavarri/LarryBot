@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_Y58oyo()
+[Activity
+    Text = ${SendActivity_Y58oyo_text()}
+]
+
+# SendActivity_Y58oyo_text()
+- La hora actual en Chile (UTC-4) es: ${dialog.time}

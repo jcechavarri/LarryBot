@@ -1,0 +1,154 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "F7q0w1",
+    "name": "OptionsDialog",
+    "comment": "Provides the bot options with buttons."
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "5vCJuB",
+        "comment": "- Let's check it out"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "LPeHqx"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "choices": [
+            "Hora",
+            "Fecha",
+            "Clima"
+          ],
+          "prompt": "${ChoiceInput_Prompt_LPeHqx()}",
+          "property": "dialog.choice"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "4DMwVo"
+          },
+          "condition": "dialog.choice",
+          "cases": [
+            {
+              "value": "Hora",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "N2ztSP"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "Time"
+                }
+              ]
+            },
+            {
+              "value": "Fecha",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "K3htXa"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "Date"
+                }
+              ]
+            },
+            {
+              "value": "Clima",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "VgJIKx"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "get_weather"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "rRClEV"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ConfirmInput_Prompt_rRClEV()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or "
+          },
+          "confirmChoices": [
+            "Si",
+            "No"
+          ],
+          "property": "dialog.repeat",
+          "value": "=dialog.repeat == \"Si\""
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "X1I1wS"
+          },
+          "condition": "=dialog.repeat",
+          "actions": [
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "ak5TNa"
+              },
+              "activityProcessed": true
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "9IdCMs"
+              },
+              "activity": "${SendActivity_9IdCMs()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "WeatherDialog.lg",
+  "recognizer": "WeatherDialog.lu.qna",
+  "id": "WeatherDialog"
+}

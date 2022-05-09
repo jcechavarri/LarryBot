@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_Time",
+  "applicationId": "=settings.luis.Time_es_cl_lu.appId",
+  "version": "=settings.luis.Time_es_cl_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

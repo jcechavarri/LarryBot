@@ -1,0 +1,40 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "q2sMSu",
+    "name": "Time",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "CPNLxs"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "u42EJb"
+          },
+          "property": "dialog.time",
+          "value": "=addHours(utcNow(), -4, \"HH:MM\", \"es-CL\")"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Y58oyo"
+          },
+          "activity": "${SendActivity_Y58oyo()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Time.lg",
+  "recognizer": "Time.lu.qna",
+  "id": "Time"
+}

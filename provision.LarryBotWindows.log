@@ -1,0 +1,17 @@
+{
+  "profileName": "LarryBotWindows",
+  "jobId": "aefe0aff-928f-4260-9b7d-cddd689b4301",
+  "projectId": "28005.145900756113",
+  "time": "2022-05-08T21:31:43.771Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: Bot at westus",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 71579270-c6f9-43b3-bd58-a3dcb7eb18b3",
+    "> Create App Registration Success! ID: 71579270-c6f9-43b3-bd58-a3dcb7eb18b3",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}
