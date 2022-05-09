@@ -6,21 +6,14 @@
 ]
 
 # SendActivity_I5ocPv_text()
-- Let's check the weather.
+- Revisemos el pronóstico.
 # TextInput_Prompt_wrBjVh()
 [Activity
     Text = ${TextInput_Prompt_wrBjVh_text()}
 ]
 
 # TextInput_Prompt_wrBjVh_text()
-- What's your postal code?
-# TextInput_UnrecognizedPrompt_wrBjVh()
-[Activity
-    Text = ${TextInput_UnrecognizedPrompt_wrBjVh_text()}
-]
-
-# TextInput_UnrecognizedPrompt_wrBjVh_text()
-- Sorry, I do not understand '${this.value}'. Please specify a 5 digit postal code in the format 12345.
+- De qué ciudad quieres saber el clima?
 # TextInput_InvalidPrompt_wrBjVh()
 [Activity
     Text = ${TextInput_InvalidPrompt_wrBjVh_text()}
@@ -28,20 +21,13 @@
 
 # TextInput_InvalidPrompt_wrBjVh_text()
 - Sorry, '${this.value}' is not valid. I'm looking for a 5 digit number as postal code. Please specify a 5 digit postal code in the format 12345.
-# SendActivity_YGuAR5()
-[Activity
-    Text = ${SendActivity_YGuAR5_text()}
-]
-
-# SendActivity_YGuAR5_text()
-- The weather is ${dialog.celsius}C and ${dialog.weather}.
 # SendActivity_Wa9NYz()
 [Activity
     Text = ${SendActivity_Wa9NYz_text()}
 ]
 
 # SendActivity_Wa9NYz_text()
-- Something went wrong: ${dialog.api_response.content.message}.
+- Tuve un problema buscando la ciudad "${user.weather_city}": ${dialog.api_response.content.message}.
 # SendActivity_3iJmbB()
 [Activity
     Attachments = ${SendActivity_3iJmbB_attachment_3fk1R9()}
@@ -49,7 +35,7 @@
 
 # SendActivity_3iJmbB_attachment_3fk1R9()
 [ThumbnailCard
-  title = Weather in ${dialog.city} in ${dialog.country}
-  text = It is "${dialog.weather}" in ${user.postalcode} and the temperature is ${dialog.celsius}&deg;C. Have a nice day.
+  title = Clima en ${dialog.city} - ${dialog.country}
+  text = El clima actual es "${dialog.weather}", con una temperatura de ${dialog.celsius}&deg;C.
   image = http://openweathermap.org/img/wn/${dialog.icon}@2x.png
 ]

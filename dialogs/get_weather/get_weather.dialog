@@ -32,15 +32,12 @@
           "maxTurnCount": 3,
           "alwaysPrompt": true,
           "allowInterruptions": false,
-          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_wrBjVh()}",
           "invalidPrompt": "${TextInput_InvalidPrompt_wrBjVh()}",
           "prompt": "${TextInput_Prompt_wrBjVh()}",
-          "property": "user.postalcode",
+          "property": "user.weather_city",
           "outputFormat": "=trim(this.value)",
-          "validations": [
-            "length(this.value) >= 5"
-          ],
-          "defaultValue": "90210"
+          "validations": [],
+          "defaultValue": "Santiago"
         },
         {
           "$kind": "Microsoft.HttpRequest",
@@ -49,7 +46,7 @@
           },
           "resultProperty": "dialog.api_response",
           "method": "GET",
-          "url": "http://api.openweathermap.org/data/2.5/weather?zip=${user.postalcode},us&appid=edb7a2cf43356ad13f178226d2af630f",
+          "url": "http://api.openweathermap.org/data/2.5/weather?q=${user.weather_city}&lang=es&appid=edb7a2cf43356ad13f178226d2af630f",
           "responseType": "json"
         },
         {
@@ -94,13 +91,6 @@
             {
               "$kind": "Microsoft.SendActivity",
               "$designer": {
-                "id": "YGuAR5"
-              },
-              "activity": "${SendActivity_YGuAR5()}"
-            },
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
                 "id": "3iJmbB"
               },
               "activity": "${SendActivity_3iJmbB()}"
@@ -119,7 +109,7 @@
               "$designer": {
                 "id": "h7L7pU"
               },
-              "property": "user.postalcode"
+              "property": "user.weather_city"
             }
           ]
         }
