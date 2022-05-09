@@ -22,7 +22,7 @@
             "id": "qo507t"
           },
           "property": "dialog.date",
-          "value": "=utcNow()"
+          "value": "=addHours(utcNow(),-4, \"dd/MM/yyyy\")"
         },
         {
           "$kind": "Microsoft.SendActivity",

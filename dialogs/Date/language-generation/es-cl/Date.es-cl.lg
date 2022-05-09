@@ -6,4 +6,4 @@
 ]
 
 # SendActivity_YjNrAf_text()
-- La fecha de hoy es: ${formatDateTime(dialog.date, "dd/MM/yyyy", "es-CL")}.
+- La fecha de hoy es: ${dialog.date} (dd/mm/aaaa).
