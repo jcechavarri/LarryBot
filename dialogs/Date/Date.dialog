@@ -17,6 +17,14 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "qo507t"
+          },
+          "property": "dialog.date",
+          "value": "=utcNow()"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "YjNrAf"
