@@ -22,7 +22,7 @@
             "id": "u42EJb"
           },
           "property": "dialog.time",
-          "value": "=addHours(utcNow(), -4, \"HH:MM\", \"es-CL\")"
+          "value": "=addHours(utcNow(), -4, \"HH:mm\")"
         },
         {
           "$kind": "Microsoft.SendActivity",
