@@ -17,14 +17,6 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SetProperty",
-          "$designer": {
-            "id": "qo507t"
-          },
-          "property": "dialog.date",
-          "value": "=addHours(utcNow(),-4, \"dd/MM/yyyy\")"
-        },
-        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "YjNrAf"

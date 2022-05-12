@@ -6,4 +6,4 @@
 ]
 
 # SendActivity_YjNrAf_text()
-- La fecha de hoy es: ${formatDateTime(utcNow(), "dddd, d MMMM yyyy", "es-CL")}.
+- La fecha de hoy es: ${formatDateTime(utcNow(), "dd/MM/yyyy", "es-CL")} (dd/mm/aaaa).

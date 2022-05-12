@@ -1,0 +1,17 @@
+{
+  "profileName": "LarryTheBot",
+  "jobId": "3770ee16-60e0-4291-9e0b-c4b45ae2c158",
+  "projectId": "28005.145900756113",
+  "time": "2022-05-11T21:11:56.098Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: ComposerBots at westeurope",
+    "> Creating App Registration ...",
+    "Start to add password for App, Id : 705cfe7c-4bb9-42df-9d0f-5d59cf77628a",
+    "> Create App Registration Success! ID: 705cfe7c-4bb9-42df-9d0f-5d59cf77628a",
+    "Deploying Web App Resource ...",
+    "Deploying Bot Resource ...",
+    "Provisioning completed successfully!"
+  ]
+}

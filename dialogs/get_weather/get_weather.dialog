@@ -17,13 +17,6 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "I5ocPv"
-          },
-          "activity": "${SendActivity_I5ocPv()}"
-        },
-        {
           "$kind": "Microsoft.TextInput",
           "$designer": {
             "id": "wrBjVh"
@@ -32,7 +25,6 @@
           "maxTurnCount": 3,
           "alwaysPrompt": true,
           "allowInterruptions": false,
-          "invalidPrompt": "${TextInput_InvalidPrompt_wrBjVh()}",
           "prompt": "${TextInput_Prompt_wrBjVh()}",
           "property": "user.weather_city",
           "outputFormat": "=trim(this.value)",
